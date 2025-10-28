@@ -7,7 +7,7 @@ import { CompetenciaModule } from './competencia/competencia-module';
 import { MarcaModule } from './marca/marca-module';
 import { PilotoModule } from './piloto/piloto-module';
 import { MotocicletaModule } from './motocicleta/motocicleta-module';
-import { PilotoList } from './piloto/piloto-list/piloto-list';
+import { MecanicoModule } from './mecanico/mecanico.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { PilotoList } from './piloto/piloto-list/piloto-list';
     CompetenciaModule,
     MarcaModule,
     PilotoModule,
-    MotocicletaModule
+    MotocicletaModule,
+    MecanicoModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
