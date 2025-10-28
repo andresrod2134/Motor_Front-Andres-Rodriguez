@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MarcaList } from './marca-list/marca-list';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MarcaList
+  ],
   imports: [
     CommonModule
   ]
