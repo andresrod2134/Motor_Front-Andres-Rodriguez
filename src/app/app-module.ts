@@ -7,6 +7,7 @@ import { CompetenciaModule } from './competencia/competencia-module';
 import { MarcaModule } from './marca/marca-module';
 import { PilotoModule } from './piloto/piloto-module';
 import { MotocicletaModule } from './motocicleta/motocicleta-module';
+import { PilotoList } from './piloto/piloto-list/piloto-list';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MotocicletaModule } from './motocicleta/motocicleta-module';
     PilotoModule,
     MotocicletaModule
   ],
+  exports: [PilotoList],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay())
