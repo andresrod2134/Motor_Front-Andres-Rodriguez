@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { CompetenciaModule } from './competencia/competencia-module';
 import { MarcaModule } from './marca/marca-module';
+import { PilotoModule } from './piloto/piloto-module';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MarcaModule } from './marca/marca-module';
     BrowserModule,
     AppRoutingModule,
     CompetenciaModule,
-    MarcaModule
+    MarcaModule,
+    PilotoModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
