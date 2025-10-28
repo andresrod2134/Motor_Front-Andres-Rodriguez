@@ -4,6 +4,7 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { CompetenciaModule } from './competencia/competencia-module';
+import { MarcaModule } from './marca/marca-module';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { CompetenciaModule } from './competencia/competencia-module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CompetenciaModule
+    CompetenciaModule,
+    MarcaModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
