@@ -10,6 +10,7 @@ import { CompetenciaList } from './competencia-list/competencia-list';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [CompetenciaList]
 })
 export class CompetenciaModule { }
