@@ -10,6 +10,7 @@ import { MotocicletaList } from './motocicleta-list/motocicleta-list';
   ],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [MotocicletaList],
 })
 export class MotocicletaModule { }
