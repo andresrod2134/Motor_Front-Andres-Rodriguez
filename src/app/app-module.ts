@@ -21,7 +21,6 @@ import { PilotoList } from './piloto/piloto-list/piloto-list';
     PilotoModule,
     MotocicletaModule
   ],
-  exports: [PilotoList],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideClientHydration(withEventReplay())

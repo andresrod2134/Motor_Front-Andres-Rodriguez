@@ -8,6 +8,7 @@ import { PilotoList } from './piloto-list/piloto-list';
   declarations: [
     PilotoList
   ],
+  exports: [PilotoList],
   imports: [
     CommonModule
   ]
