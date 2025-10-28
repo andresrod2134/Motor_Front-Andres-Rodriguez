@@ -6,6 +6,7 @@ import { App } from './app';
 import { CompetenciaModule } from './competencia/competencia-module';
 import { MarcaModule } from './marca/marca-module';
 import { PilotoModule } from './piloto/piloto-module';
+import { MotocicletaModule } from './motocicleta/motocicleta-module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PilotoModule } from './piloto/piloto-module';
     AppRoutingModule,
     CompetenciaModule,
     MarcaModule,
-    PilotoModule
+    PilotoModule,
+    MotocicletaModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
