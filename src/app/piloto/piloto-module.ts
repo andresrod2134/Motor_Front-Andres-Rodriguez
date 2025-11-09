@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PilotoList } from './piloto-list/piloto-list';
+import { PilotoListComponent } from './piloto-list/piloto-list.component';
 
 
 
 @NgModule({
-  declarations: [
-    PilotoList
-  ],
-  exports: [PilotoList],
+  declarations: [PilotoListComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [PilotoListComponent]
 })
 export class PilotoModule { }

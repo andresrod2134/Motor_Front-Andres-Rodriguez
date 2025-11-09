@@ -7,6 +7,8 @@ import { CompetenciaModule } from './competencia/competencia-module';
 import { MarcaModule } from './marca/marca-module';
 import { PilotoModule } from './piloto/piloto-module';
 import { MotocicletaModule } from './motocicleta/motocicleta-module';
+import { ParticipacionModule } from './participacion/participacion-module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { MotocicletaModule } from './motocicleta/motocicleta-module';
     CompetenciaModule,
     MarcaModule,
     PilotoModule,
-    MotocicletaModule
+    MotocicletaModule,
+    ParticipacionModule,
+    HttpClientModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),

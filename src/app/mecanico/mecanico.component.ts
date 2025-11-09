@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  standalone: false,
   selector: 'app-mecanico',
   templateUrl: './mecanico.component.html',
   styleUrls: ['./mecanico.component.css']
