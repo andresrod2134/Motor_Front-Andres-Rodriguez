@@ -11,6 +11,9 @@ import { Piloto } from '../piloto';
 export class PilotoListComponent implements OnInit {
 
   pilotos: Array<Piloto> = [];
+  selectedPiloto!: Piloto;
+  selected = false;
+
   constructor(private pilotoService: PilotoService) { }
 
   getPilotos(): void {
@@ -20,8 +23,15 @@ export class PilotoListComponent implements OnInit {
     });
   }
 
+  onSelected(piloto: Piloto): void {
+    this.selected = true;
+    this.selectedPiloto = piloto;
+    console.log('Piloto seleccionado:', piloto);
+  }
+
   ngOnInit() {
     this.getPilotos();
   }
 
 }
+
