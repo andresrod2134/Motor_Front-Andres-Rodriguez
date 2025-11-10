@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PilotoList } from './piloto-list';
+import { PilotoDetailComponent } from './piloto-detail.component';
 
-describe('PilotoList', () => {
-  let component: PilotoList;
-  let fixture: ComponentFixture<PilotoList>;
+describe('PilotoDetailComponent', () => {
+  let component: PilotoDetailComponent;
+  let fixture: ComponentFixture<PilotoDetailComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [PilotoList]
+      declarations: [PilotoDetailComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PilotoList);
+    fixture = TestBed.createComponent(PilotoDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
