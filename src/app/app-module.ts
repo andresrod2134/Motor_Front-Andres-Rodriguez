@@ -4,21 +4,25 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { CompetenciaModule } from './competencia/competencia-module';
-import { MarcaModule } from './marca/marca-module';
 import { PilotoModule } from './piloto/piloto-module';
 import { MotocicletaModule } from './motocicleta/motocicleta-module';
 import { ParticipacionModule } from './participacion/participacion-module';
 import { HttpClientModule } from '@angular/common/http';
+import { MarcaListComponent } from './marca/marca-list/marca-list.component';
+import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
+
 
 @NgModule({
   declarations: [
-    App
+    App,
+    MarcaListComponent,
+    MarcaDetailComponent
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     CompetenciaModule,
-    MarcaModule,
     PilotoModule,
     MotocicletaModule,
     ParticipacionModule,

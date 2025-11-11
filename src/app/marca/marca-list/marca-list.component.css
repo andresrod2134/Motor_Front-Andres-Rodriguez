@@ -1,0 +1,20 @@
+.contenedor { padding: 1rem; }
+.estado { margin: .5rem 0; opacity: .85; }
+.estado.error { color: #b00020; }
+.resumen { margin: .5rem 0 1rem; }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.card {
+  border: 1px solid #e5e7eb; border-radius: .75rem; background: #fff;
+  display: flex; gap: .75rem; align-items: center; padding: .75rem;
+  cursor: pointer; transition: transform .12s ease, box-shadow .12s ease;
+}
+.card:hover { transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,.06); }
+.card img { width:64px; height:64px; object-fit:contain; border-radius:.5rem; background:#f9fafb; border:1px solid #f1f5f9; }
+.info h3 { margin:0 0 .25rem; font-size:1.05rem; }
+.info p { margin:.15rem 0; }
+.desc { color:#475569; font-size:.9rem; }

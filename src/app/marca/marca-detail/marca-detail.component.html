@@ -1,0 +1,18 @@
+<section class="contenedor">
+  <a routerLink="/marcas" class="volver">← Volver</a>
+
+  <div *ngIf="cargando" class="estado">Cargando...</div>
+  <div *ngIf="error" class="estado error">{{ error }}</div>
+
+  <ng-container *ngIf="!cargando && marca">
+    <header class="cabecera">
+      <img *ngIf="marca.logoUrl" [src]="marca.logoUrl" [alt]="marca.nombre" />
+      <div>
+        <h2>{{ marca.nombre }}</h2>
+        <p><strong>País:</strong> {{ marca.paisOrigen }}</p>
+        <p *ngIf="marca.fundacion"><strong>Fundación:</strong> {{ marca.fundacion }}</p>
+      </div>
+    </header>
+    <p *ngIf="marca.descripcion" class="desc">{{ marca.descripcion }}</p>
+  </ng-container>
+</section>

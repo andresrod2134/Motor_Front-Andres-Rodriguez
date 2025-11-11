@@ -1,0 +1,26 @@
+<section class="contenedor">
+  <h2>Marcas</h2>
+
+  <div *ngIf="cargando" class="estado">Cargando...</div>
+  <div *ngIf="error" class="estado error">{{ error }}</div>
+
+  <div class="resumen" *ngIf="!cargando && !error">
+    <strong>Total:</strong> {{ marcas.length }}
+  </div>
+
+  <div class="grid" *ngIf="marcas.length">
+    <article class="card" *ngFor="let m of marcas" [routerLink]="['/marcas', m.id]">
+      <img *ngIf="m.logoUrl" [src]="m.logoUrl" [alt]="m.nombre" />
+      <div class="info">
+        <h3>{{ m.nombre }}</h3>
+        <p><strong>País:</strong> {{ m.paisOrigen }}</p>
+        <p *ngIf="m.fundacion"><strong>Fundación:</strong> {{ m.fundacion }}</p>
+        <p *ngIf="m.descripcion" class="desc">{{ m.descripcion }}</p>
+      </div>
+    </article>
+  </div>
+
+  <div *ngIf="!cargando && !error && !marcas.length" class="estado">
+    No hay marcas para mostrar.
+  </div>
+</section>
