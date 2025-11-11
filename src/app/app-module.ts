@@ -15,8 +15,7 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
 @NgModule({
   declarations: [
     App,
-    MarcaListComponent,
-    MarcaDetailComponent
+
 
   ],
   imports: [
@@ -27,6 +26,8 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
     MotocicletaModule,
     ParticipacionModule,
     HttpClientModule
+    MarcaListComponent,
+    MarcaDetailComponent,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
