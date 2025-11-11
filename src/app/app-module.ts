@@ -26,8 +26,7 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
     MotocicletaModule,
     ParticipacionModule,
     HttpClientModule
-    MarcaListComponent,
-    MarcaDetailComponent,
+
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
