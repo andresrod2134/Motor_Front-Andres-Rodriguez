@@ -6,9 +6,9 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
 const routes: Routes = [
   { path: '', redirectTo: 'marcas', pathMatch: 'full' },
 
-  { path: 'marcas', component: MarcaListComponent, renderMode: 'server' },
+  { path: 'marcas', component: MarcaListComponent },
 
-  { path: 'marcas/:id', component: MarcaDetailComponent, renderMode: 'client' },
+  { path: 'marcas/:id', component: MarcaDetailComponent },
 
   { path: '**', redirectTo: 'marcas' }
 ];
