@@ -6,9 +6,15 @@
     "ISIS2603_202520_S3_E4_Motor_Front": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": { "standalone": false },
-        "@schematics/angular:directive": { "standalone": false },
-        "@schematics/angular:pipe": { "standalone": false }
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
       },
       "root": "",
       "sourceRoot": "src",
@@ -20,7 +26,10 @@
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
@@ -28,11 +37,8 @@
             "scripts": [],
             "server": "src/main.server.ts",
             "outputMode": "server",
-            "ssr": { "entry": "src/server.ts" },
-
-            "prerender": {
-              "routes": ["/", "/marcas"],      
-              "discoverRoutes": false          
+            "ssr": {
+              "entry": "src/server.ts"
             }
           },
           "configurations": {
@@ -40,7 +46,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "700kB",   
+                  "maximumWarning": "500kB",
                   "maximumError": "1MB"
                 },
                 {
@@ -71,18 +77,27 @@
           },
           "defaultConfiguration": "development"
         },
-        "extract-i18n": { "builder": "@angular/build:extract-i18n" },
+        "extract-i18n": {
+          "builder": "@angular/build:extract-i18n"
+        },
         "test": {
           "builder": "@angular/build:karma",
           "options": {
             "polyfills": ["zone.js", "zone.js/testing"],
             "tsConfig": "tsconfig.spec.json",
-            "assets": ["src/favicon.ico", "src/assets"],
-            "styles": ["src/styles.css"]
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.css"
+            ]
           }
         }
       }
     }
   },
-  "cli": { "analytics": "3f13c872-2426-4471-95f0-c7bd082847fb" }
+  "cli": {
+    "analytics": "3f13c872-2426-4471-95f0-c7bd082847fb"
+  }
 }
