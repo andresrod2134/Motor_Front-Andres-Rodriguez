@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { MarcaService } from '../marca.service';
 import { Marca } from '../marca.model';
 
 @Component({
   selector: 'app-marca-detail',
+  standalone: true,
+  imports: [CommonModule, RouterModule], 
   templateUrl: './marca-detail.component.html',
   styleUrls: ['./marca-detail.component.css']
 })
@@ -22,7 +26,7 @@ export class MarcaDetailComponent implements OnInit {
     this.cargando = true;
     this.marcaService.getMarca(id).subscribe({
       next: (m) => { this.marca = m; this.cargando = false; },
-      error: (e) => { console.error(e); this.error = 'No se pudo cargar la marca.'; this.cargando = false; }
+      error: () => { this.error = 'No se pudo cargar la marca.'; this.cargando = false; }
     });
   }
 }
