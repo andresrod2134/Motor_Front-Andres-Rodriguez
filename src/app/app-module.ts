@@ -1,22 +1,23 @@
+// src/app/app-module.ts
 import { NgModule, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { BrowserModule, provideClientHydration, withEventReplay } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing-module';
+import { AppRoutingModule } from './app-routing.module'; // 👈 Asegúrate: es .module (no app-routing-module)
 import { App } from './app';
+
 import { CompetenciaModule } from './competencia/competencia-module';
 import { PilotoModule } from './piloto/piloto-module';
 import { MotocicletaModule } from './motocicleta/motocicleta-module';
 import { ParticipacionModule } from './participacion/participacion-module';
-import { HttpClientModule } from '@angular/common/http';
+
+// 👇 Estos dos componentes SON standalone (standalone: true)
 import { MarcaListComponent } from './marca/marca-list/marca-list.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
 
-
 @NgModule({
   declarations: [
-    App,
-
-
+    App // 👈 SOLO el root component aquí. Nada más.
   ],
   imports: [
     BrowserModule,
@@ -25,9 +26,11 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
     PilotoModule,
     MotocicletaModule,
     ParticipacionModule,
-    HttpClientModule
+    HttpClientModule,
+
+    // 👇 Los standalone van en imports (NO en declarations)
     MarcaListComponent,
-    MarcaDetailComponent,
+    MarcaDetailComponent
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
@@ -35,4 +38,4 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
   ],
   bootstrap: [App]
 })
-export class AppModule { }
+export class AppModule {}
