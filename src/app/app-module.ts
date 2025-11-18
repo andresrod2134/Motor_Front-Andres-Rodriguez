@@ -7,6 +7,7 @@ import { CompetenciaModule } from './competencia/competencia-module';
 import { PilotoModule } from './piloto/piloto-module';
 import { MotocicletaModule } from './motocicleta/motocicleta-module';
 import { ParticipacionModule } from './participacion/participacion-module';
+import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { HttpErrorInterceptorService } from './interceptors/http-error-interceptor.service';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
