@@ -8,6 +8,7 @@ import { PilotoModule } from './piloto/piloto-module';
 import { MotocicletaModule } from './motocicleta/motocicleta-module';
 import { ParticipacionModule } from './participacion/participacion-module';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrModule } from 'ngx-toastr';
 import { MarcaListComponent } from './marca/marca-list/marca-list.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
 
@@ -25,7 +26,12 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
     PilotoModule,
     MotocicletaModule,
     ParticipacionModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot({
+      timeOut: 10000,
+      positionClass: 'toast-bottom-right',
+      preventDuplicates: true,
+      })
 
   ],
   providers: [
