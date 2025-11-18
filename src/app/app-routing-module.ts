@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MarcaListComponent } from './marca/marca-list/marca-list.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
+import { PilotoListComponent } from './piloto/piloto-list/piloto-list.component';
 
 const routes: Routes = [
+
+  { path: '', component: PilotoListComponent},
+  { path: 'books', loadChildren: () => import('./piloto/piloto-module').then(m => m.PilotoModule) },
+
   { path: '', redirectTo: 'marcas', pathMatch: 'full' },
 
   { path: 'marcas', component: MarcaListComponent },
