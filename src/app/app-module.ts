@@ -9,6 +9,8 @@ import { MotocicletaModule } from './motocicleta/motocicleta-module';
 import { ParticipacionModule } from './participacion/participacion-module';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
+import { HttpErrorInterceptorService } from './interceptors/http-error-interceptor.service';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MarcaListComponent } from './marca/marca-list/marca-list.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
 
@@ -36,7 +38,12 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    {
+    provide: HTTP_INTERCEPTORS,
+      useClass: HttpErrorInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [App]
 })
