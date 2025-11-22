@@ -12,13 +12,13 @@ import { HttpErrorInterceptorService } from './interceptors/http-error-intercept
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { MarcaListComponent } from './marca/marca-list/marca-list.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
+import { HomePageModule } from './home-page/home-page-module';
+
 
 
 @NgModule({
   declarations: [
-    App,
-
-
+    App
   ],
   imports: [
     BrowserModule,
@@ -27,6 +27,7 @@ import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.componen
     PilotoModule,
     MotocicletaModule,
     ParticipacionModule,
+    HomePageModule,
     HttpClientModule,
     ToastrModule.forRoot({
       timeOut: 10000,

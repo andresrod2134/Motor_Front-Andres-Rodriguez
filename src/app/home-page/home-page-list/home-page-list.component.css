@@ -1,0 +1,80 @@
+
+.fullscreen-bg {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;            
+  background-image: url('../../../assets/img/home/fondohome.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 25px;
+}
+
+
+.title-main {
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+
+.layout {
+  width: 95vw;
+  height: calc(100vh - 120px);  
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.big-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.big-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;   
+  height: 100%;
+}
+
+.small-card {
+  width: 100%;
+  height: 48%;                      
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.small-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 0;
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: black;
+}

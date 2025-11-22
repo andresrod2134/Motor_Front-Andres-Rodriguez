@@ -2,20 +2,24 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MarcaListComponent } from './marca/marca-list/marca-list.component';
 import { MarcaDetailComponent } from './marca/marca-detail/marca-detail.component';
-import { PilotoListComponent } from './piloto/piloto-list/piloto-list.component';
 
 const routes: Routes = [
 
-  { path: '', component: PilotoListComponent},
-  { path: 'books', loadChildren: () => import('./piloto/piloto-module').then(m => m.PilotoModule) },
+  // HOME AL INICIAR
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
 
-  { path: '', redirectTo: 'marcas', pathMatch: 'full' },
+  // HOMEPAGE
+  { path: 'home', loadChildren: () => import('./home-page/home-page-module').then(m => m.HomePageModule) },
 
+  // PILOTO
+  { path: 'piloto', loadChildren: () => import('./piloto/piloto-module').then(m => m.PilotoModule) },
+
+  // MARCAS
   { path: 'marcas', component: MarcaListComponent },
-
   { path: 'marcas/:id', component: MarcaDetailComponent },
 
-  { path: '**', redirectTo: 'marcas' }
+  // CUALQUIER OTRA RUTA → HOME
+  { path: '**', redirectTo: '/home' }
 ];
 
 @NgModule({
@@ -23,3 +27,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+
