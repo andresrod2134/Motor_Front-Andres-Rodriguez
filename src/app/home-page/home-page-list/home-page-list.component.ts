@@ -9,10 +9,20 @@ import { Router } from '@angular/router';
 })
 export class HomePageListComponent {
 
+  showPilotoPanel = false;
+
   constructor(private router: Router) {}
 
   goTo(path: string) {
     this.router.navigate([path]);
+  }
+
+  openPilotoPanel() {
+    this.showPilotoPanel = true;
+  }
+
+  closePanel() {
+    this.showPilotoPanel = false;
   }
 }
 

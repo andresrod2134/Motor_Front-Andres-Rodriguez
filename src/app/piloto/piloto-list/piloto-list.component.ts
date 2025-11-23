@@ -16,9 +16,13 @@ export class PilotoListComponent implements OnInit {
 
   constructor(private pilotoService: PilotoService) { }
 
+  ngOnInit() {
+    this.getPilotos();
+  }
+
   getPilotos(): void {
     this.pilotoService.getPilotos().subscribe((pilotos) => {
-      console.log('Pilotos que llegaron:', pilotos); 
+      console.log('Pilotos que llegaron:', pilotos);
       this.pilotos = pilotos;
     });
   }
@@ -29,9 +33,10 @@ export class PilotoListComponent implements OnInit {
     console.log('Piloto seleccionado:', piloto);
   }
 
-  ngOnInit() {
-    this.getPilotos();
+  goBack(): void {
+    window.history.back();
   }
 
 }
+
 

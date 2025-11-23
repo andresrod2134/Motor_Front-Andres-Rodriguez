@@ -78,3 +78,57 @@
   font-weight: 800;
   color: black;
 }
+
+.piloto-panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  backdrop-filter: blur(4px);
+  color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  z-index: 999;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from { right: -350px; }
+  to { right: 0; }
+}
+
+.close-btn {
+  background: transparent;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.panel-options {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.panel-option {
+  background: white;
+  color: black;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.panel-option:hover {
+  background: #ffd700;
+}
+
+

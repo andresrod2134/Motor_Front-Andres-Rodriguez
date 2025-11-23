@@ -1,34 +1,35 @@
-@if (selected) {
-  <app-piloto-detail [pilotoDetail]="selectedPiloto"></app-piloto-detail>
-}
+<div class="piloto-bg">
+<button class="btn-back" (click)="goBack()">
+  🏠 Inicio
+</button>
 
-<div class="container-fluid py-4">
-  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-3">
-    @for (piloto of pilotos; track piloto.id) {
-      <div class="col">
-        <div class="card h-100 shadow-sm">
-          <img
-            class="card-img-top"
-            [src]="'assets/img/pilotos/' + piloto.fotografias"
-            alt="{{ piloto.nombre }}"
-            (click)="onSelected(piloto)"
-          />
-          <div class="card-body text-center">
-            <h5 class="card-title mb-1">{{ piloto.nombre }}</h5>
-            <p class="card-text text-muted small">
-              {{ piloto.fechaNacimiento }}
-            </p>
-            <p class="card-text small mb-0 text-secondary">
-              {{ piloto.rango }} - {{ piloto.pais }}
-            </p>
+
+
+  @if (selected) {
+    <app-piloto-detail [pilotoDetail]="selectedPiloto"></app-piloto-detail>
+  }
+
+  <div class="container-fluid py-4 piloto-container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+      @for (piloto of pilotos; track piloto.id) {
+        <div class="col">
+          <div class="piloto-card" (click)="onSelected(piloto)">
+            <img
+              class="piloto-img"
+              [src]="'assets/img/pilotos/' + piloto.fotografias"
+              alt="{{ piloto.nombre }}"
+            />
+            <div class="piloto-info">
+              <h5>{{ piloto.nombre }}</h5>
+              <p>{{ piloto.fechaNacimiento }}</p>
+              <span>{{ piloto.rango }} - {{ piloto.pais }}</span>
+            </div>
           </div>
         </div>
-      </div>
-    }
+      }
+    </div>
   </div>
+
 </div>
-
-
-
 
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';   
 import { PilotoListComponent } from './piloto-list/piloto-list.component';
 import { PilotoDetailComponent } from './piloto-detail/piloto-detail.component';
 import { PilotoRoutingModule } from './piloto-routing.module';
@@ -11,6 +12,7 @@ import { PilotoRoutingModule } from './piloto-routing.module';
   ],
   imports: [
     CommonModule,
+    RouterModule,       
     PilotoRoutingModule
   ]
 })

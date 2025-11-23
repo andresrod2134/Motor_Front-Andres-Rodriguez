@@ -4,7 +4,6 @@
 
   <div class="layout">
 
-
     <div class="left">
       <div class="big-card" (click)="goTo('/competencia')">
         <img src="assets/img/home/competencia.jpg" alt="Competencia">
@@ -12,9 +11,9 @@
       </div>
     </div>
 
-
     <div class="right">
-      <div class="small-card" (click)="goTo('/piloto')">
+
+      <div class="small-card" (click)="openPilotoPanel()">
         <img src="assets/img/home/piloto.jpg" alt="Piloto">
         <div class="label">PILOTOS</div>
       </div>
@@ -25,6 +24,18 @@
       </div>
     </div>
 
+  </div>
+
+  <div class="piloto-panel" *ngIf="showPilotoPanel">
+    <button class="close-btn" (click)="closePanel()">X</button>
+
+    <h2>Selecciona una categoría</h2>
+
+    <div class="panel-options">
+      <div class="panel-option" (click)="goTo('/piloto')">Pilotos</div>
+      <div class="panel-option">Mecánicos</div>
+      <div class="panel-option">Entusiastas</div>
+    </div>
   </div>
 
 </div>
