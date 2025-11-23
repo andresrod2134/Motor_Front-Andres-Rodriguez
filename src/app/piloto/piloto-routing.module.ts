@@ -4,6 +4,7 @@ import { PilotoListComponent } from './piloto-list/piloto-list.component';
 import { PilotoDetailComponent } from './piloto-detail/piloto-detail.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'list', pathMatch: 'full' }, 
   { path: 'list', component: PilotoListComponent },
   { path: ':id', component: PilotoDetailComponent }
 ];
@@ -13,4 +14,3 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class PilotoRoutingModule {}
-
