@@ -3,6 +3,16 @@
   🏠 Inicio
 </button>
 
+<div class="ordenamiento-box">
+  <label for="ordenar">Ordenar por:</label>
+  <select id="ordenar" class="form-select" (change)="ordenarPilotos($event)">
+    <option value="nombre">Nombre (A-Z)</option>
+    <option value="fecha">Fecha de nacimiento (más joven primero)</option>
+    <option value="pais">País (A-Z)</option>
+    <option value="rango">Rango (A-Z)</option>
+  </select>
+</div>
+
 
 
   @if (selected) {
