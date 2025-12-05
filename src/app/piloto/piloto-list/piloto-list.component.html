@@ -13,33 +13,36 @@
   </select>
 </div>
 
+@if (selected) {
+  <app-piloto-detail [pilotoDetail]="selectedPiloto"></app-piloto-detail>
+}
 
-
-  @if (selected) {
-    <app-piloto-detail [pilotoDetail]="selectedPiloto"></app-piloto-detail>
-  }
-
-  <div class="container-fluid py-4 piloto-container">
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
-      @for (piloto of pilotos; track piloto.id) {
-        <div class="col">
-          <div class="piloto-card" (click)="onSelected(piloto)">
-            <img
-              class="piloto-img"
-              [src]="'assets/img/pilotos/' + piloto.fotografias"
-              alt="{{ piloto.nombre }}"
-            />
-            <div class="piloto-info">
-              <h5>{{ piloto.nombre }}</h5>
-              <p>{{ piloto.fechaNacimiento }}</p>
-              <span>{{ piloto.rango }} - {{ piloto.pais }}</span>
-            </div>
+<div class="container-fluid py-4 piloto-container">
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5 g-4">
+    @for (piloto of pilotos; track piloto.id) {
+      <div class="col">
+        <div class="piloto-card" (click)="onSelected(piloto)">
+          <img
+            class="piloto-img"
+            [src]="'assets/img/pilotos/' + piloto.fotografias"
+            alt="{{ piloto.nombre }}"
+          />
+          <div class="piloto-info">
+            <h5>{{ piloto.nombre }}</h5>
+            <p>{{ piloto.fechaNacimiento }}</p>
+            <span>{{ piloto.rango }} - {{ piloto.pais }}</span>
           </div>
         </div>
-      }
-    </div>
+      </div>
+    }
   </div>
-
 </div>
 
+<!-- PAGINACIÓN -->
+<div class="pagination-controls">
+  <button (click)="previousPage()" [disabled]="page === 0">Anterior</button>
+  <span>Página {{ page + 1 }} de {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="page === totalPages - 1">Siguiente</button>
+</div>
 
+</div>
